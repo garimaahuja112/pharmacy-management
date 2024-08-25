@@ -52,7 +52,8 @@ const createPharmacy=async(req,res) => {
     } 
 };
 
-router.get("/pharmacies",authMiddleware,getAllPharmacies);
+router.get("/pharmacies",getAllPharmacies);
+// router.get("/pharmacies",authMiddleware,getAllPharmacies);
 router.get("/pharmacies/search",authMiddleware,searchPharmacy);
 router.post("/pharmacies",authMiddleware,createPharmacy);
 
